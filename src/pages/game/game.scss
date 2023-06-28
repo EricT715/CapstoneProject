@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #game {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: black;
+    position: relative; /* Added positioning */
+  }
+  
+  #character {
+    width: 20px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute; /* Changed positioning to absolute */
+    bottom: 0; /* Adjusted positioning to align with the ground level */
+  }
+  
+  .character.ducking {
+    height: 20px;
+    top: 0; /* Adjusted positioning to align with the ground level */
+  }
+  
+  .animate {
+    animation: jump 500ms infinite;
+  }
+  
+  #block {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: absolute; /* Changed positioning to absolute */
+    bottom: 0; /* Adjusted positioning to align with the ground level */
+    left: 480px;
+    animation: block 1s infinite linear;
+  }
+  
+  @keyframes block {
+    0% {
+      left: 480px;
+    }
+    100% {
+      left: -40px;
+    }
+  }
+  
+  @keyframes jump {
+    0% {
+      top: 0; /* Adjusted jump start position to align with the ground level */
+    }
+    30% {
+      top: -20px; /* Adjusted jump height to clear the maximum obstacle height */
+    } 
+    70% {
+      top: -20x; /* Adjusted jump height to clear the maximum obstacle height */
+    }
+     100% {
+      top: 0; /* Adjusted jump end position to align with the ground level */
+    }
+  }
